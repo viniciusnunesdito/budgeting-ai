@@ -1,0 +1,7 @@
+plugins {
+    // Lets Gradle auto-download the JDK 25 toolchain declared in build.gradle
+    // instead of requiring it to be pre-installed on the machine.
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+}
+
+rootProject.name = 'budgeting'
