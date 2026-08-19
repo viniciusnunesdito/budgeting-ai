@@ -157,6 +157,11 @@ feliz quanto os casos de validação.
 
 ## Como testar o fluxo principal
 
+> Já rodei a aplicação de ponta a ponta (perfil `local`, sem Docker) e capturei as
+> respostas reais — incluindo o resumo financeiro calculado corretamente e a
+> ferramenta de IA batendo de verdade na OpenAI — em
+> [`docs/EXAMPLES.md`](docs/EXAMPLES.md#0-evidência-real-de-execução-validada-localmente).
+
 ### 1. Testes automatizados
 
 ```bash
