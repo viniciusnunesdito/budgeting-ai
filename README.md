@@ -93,6 +93,20 @@ docker compose up -d
 
 A API sobe em `http://localhost:8080`.
 
+### Sem Docker (perfil `local`, H2)
+
+Se não tiver Docker instalado, dá pra rodar sem MySQL usando um perfil alternativo
+com H2 (banco em arquivo, sem precisar de container):
+
+```bash
+export OPENAI_API_KEY="sua_chave_aqui"
+./gradlew bootRun --args='--spring.profiles.active=local'
+```
+
+Os dados ficam em `./data/budgeting.mv.db`. O `OPENAI_API_KEY` também tem um valor
+padrão de placeholder, então a aplicação sobe mesmo sem ele — só os endpoints de IA
+(`/api/assistant/*`) exigem uma chave real para funcionar de verdade.
+
 ## Endpoints
 
 ### Transações (REST tradicional)

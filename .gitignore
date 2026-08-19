@@ -1,6 +1,9 @@
 HELP.md
 .gradle
 build/
+
+### Local H2 database files (profile "local", see application-local.properties) ###
+/data/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/

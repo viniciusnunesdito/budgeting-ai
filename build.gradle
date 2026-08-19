@@ -38,9 +38,10 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     runtimeOnly 'com.mysql:mysql-connector-j'
 
-    // Used only for the test scope, so the main flows can be tested
-    // without requiring a running MySQL instance (see compose.yml).
-    testRuntimeOnly 'com.h2database:h2'
+    // Backs the test scope (so the main flows can be tested without a running
+    // MySQL instance) and the optional "local" profile (application-local.properties),
+    // for running the app without Docker — see compose.yml / README for the MySQL path.
+    runtimeOnly 'com.h2database:h2'
 }
 
 tasks.named('test') {
